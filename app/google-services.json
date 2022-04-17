@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "951855607051",
+    "firebase_url": "https://third-eye-ef820-default-rtdb.firebaseio.com",
+    "project_id": "third-eye-ef820",
+    "storage_bucket": "third-eye-ef820.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951855607051:android:dcd80182cb2284f8a3860e",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFyq3XReHsYn_qIjCCTju0Txu6_IItbyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951855607051:android:71172f01bc17ee78a3860e",
+        "android_client_info": {
+          "package_name": "com.example.third_eye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFyq3XReHsYn_qIjCCTju0Txu6_IItbyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951855607051:android:721e349efab3c2eca3860e",
+        "android_client_info": {
+          "package_name": "com.vatsalyadav.uploadimage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFyq3XReHsYn_qIjCCTju0Txu6_IItbyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951855607051-fqgrrh8mu2fq0t23o335nc3f5onqv3n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
