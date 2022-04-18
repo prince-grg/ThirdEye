@@ -1,9 +1,9 @@
 package com.example.demo.Model;
 
 public class Person {
-    private String name,age,gender,address,number,fathername,imageLocation;
+    private String name,age,gender,address,number,fathername,imageLocation,uid;
 
-    public Person(String name, String age, String gender, String address, String number, String fathername, String imageLocation) {
+    public Person(String name, String age, String gender, String address, String number, String fathername, String imageLocation,String uid) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -11,13 +11,32 @@ public class Person {
         this.number = number;
         this.fathername = fathername;
         this.imageLocation = imageLocation;
+        this.uid=uid;
     }
+
+    public Person() {
+    }
+
+    public Person(String name, String age, String imageLocation) {
+        this.name = name;
+        this.age = age;
+        this.imageLocation = imageLocation;
+    }
+
 
     public Person(String name, String age, String gender, String imageLocation) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.imageLocation = imageLocation;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getName() {

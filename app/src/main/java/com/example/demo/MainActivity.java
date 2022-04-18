@@ -28,6 +28,7 @@ import android.widget.Toast;
 import com.example.demo.Model.Person;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     FirebaseStorage storage;
     StorageReference storageReference;
     FirebaseFirestore fstore;
+    FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         tgender = findViewById(R.id.txt_gender);
         taddress = findViewById(R.id.txt_address);
 
-
+        auth=FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
@@ -84,7 +87,11 @@ public class MainActivity extends AppCompatActivity {
         AutoCompleteTextView textView = (AutoCompleteTextView)
                 findViewById(R.id.txt_gender);
         textView.setAdapter(adapter);
-
+        if(auth.getCurrentUser()==null)
+        {
+            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            finish();
+        }
         progressDialog = new ProgressDialog(MainActivity.this);
         progressDialog.setTitle("Uplaoding ..");
         progressDialog.setMessage("Registering new user");
@@ -138,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             if (name.isEmpty() || age.isEmpty()) {
                 Toast.makeText(MainActivity.this, "Please Fill Mandatory Fields", Toast.LENGTH_SHORT).show();
             } else {
-                Person person = new Person(name, age, gender, address, phone, father_name, reference.getPath());
+                Person person = new Person(name, age, gender, address, phone, father_name, reference.getPath(),auth.getUid());
                 fstore.collection("Persons").document(rUID).set(person).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
